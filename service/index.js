@@ -9,39 +9,39 @@ const createUser = ({ name, email }) => {
 };
 
 const addingUserSleep = ({ email, sleep }) => {
-  return User.update({ email: email }, sleep, { upsert: false });
+  return User.updateOne({ email: email }, sleep, { upsert: false });
 };
 
 const updatingUserWeight = (email, weight) => {
-  return User.update({ email: email }, weight, { upsert: false });
+  return User.updateOne({ email: email }, weight, { upsert: false });
 };
 
 const updatingUserAge = (email, age) => {
-  return User.update({ email: email }, age, { upsert: false });
+  return User.updateOne({ email: email }, age, { upsert: false });
 };
 
 const updatingUserHeight = (email, height) => {
-  return User.update({ email: email }, height, { upsert: false });
+  return User.updateOne({ email: email }, height, { upsert: false });
 };
 
 const updatingUserLike = (email, like) => {
-  return User.update({ email: email }, like, { upsert: false });
+  return User.updateOne({ email: email }, like, { upsert: false });
 };
 
 const updatingUserHeart = (email, heart) => {
-  return User.update({ email: email }, heart, { upsert: false });
+  return User.updateOne({ email: email }, heart, { upsert: false });
 };
 
 const updatingUserPressure = (email, pressure) => {
-  return User.update({ email: email }, pressure, { upsert: false });
+  return User.updateOne({ email: email }, pressure, { upsert: false });
 };
 
 const updatingUserBreath = (email, breath) => {
-  return User.update({ email: email }, breath, { upsert: false });
+  return User.updateOne({ email: email }, breath, { upsert: false });
 };
 
 const updatingUserTemp = (email, temp) => {
-  return User.update({ email: email }, temp, { upsert: false });
+  return User.updateOne({ email: email }, temp, { upsert: false });
 };
 
 module.exports = {
