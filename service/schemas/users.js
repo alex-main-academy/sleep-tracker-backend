@@ -41,7 +41,16 @@ const user = new Schema({
       durationHours: String,
     },
   ],
+  avatar: {
+    type: String,
+    default: "default_avatar.jpg",
+  },
 });
+
+user.methods.changeAvatar = function (newAvatar) {
+  this.avatar = newAvatar;
+  return this.save();
+};
 
 const User = mongoose.model("user", user);
 
