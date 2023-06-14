@@ -16,8 +16,14 @@ const User = require("../../service/schemas/users");
 const multer = require("multer");
 const path = require("path");
 const { getUser } = require("../../service");
+const app = require("../../app");
 const router = express.Router();
 
+router.get("/uploads/:filename", (req, res) => {
+  const filename = req.params.filename;
+  const filePath = path.join(__dirname, "../../uploads", filename);
+  res.sendFile(filePath);
+});
 router.get("/:email", getUserByEmail);
 router.post("/", addUser);
 router.put("/:email/height", updateUserHeight);
